@@ -457,7 +457,7 @@ class Dispatcher extends CakeObject {
 				$params = $this->_restructureParams($params, true);
 			}
 			$this->params = $params;
-			$controller =& new $ctrlClass();
+			$controller = new $ctrlClass();
 		}
 		return $controller;
 	}
@@ -684,7 +684,7 @@ class Dispatcher extends CakeObject {
 					App::import('Core', 'View');
 				}
 				$controller = null;
-				$view =& new View($controller);
+				$view = new View($controller);
 				$return = $view->renderCache($filename, getMicrotime());
 				if (!$return) {
 					ClassRegistry::removeObject('view');

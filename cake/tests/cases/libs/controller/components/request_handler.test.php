@@ -281,7 +281,7 @@ class RequestHandlerComponentTest extends CakeTestCase {
 		$this->RequestHandler->renderAs($this->Controller, 'xml');
 		$this->assertEqual($this->Controller->viewPath, 'request_handler_test' . DS . 'xml');
 		$this->assertEqual($this->Controller->layoutPath, 'xml');
-		
+
 		$this->assertTrue(in_array('Xml', $this->Controller->helpers));
 
 		$this->RequestHandler->renderAs($this->Controller, 'js');
@@ -568,7 +568,7 @@ class RequestHandlerComponentTest extends CakeTestCase {
 			array('base' => '/officespace', 'here' => '/officespace/accounts/', 'webroot' => '/officespace/')
 		));
 
-		$RequestHandler =& new NoStopRequestHandler();
+		$RequestHandler = new NoStopRequestHandler();
 
 		ob_start();
 		$RequestHandler->beforeRedirect(

@@ -85,7 +85,7 @@ class FileEngine extends CacheEngine {
 			if (!class_exists('File')) {
 				require LIBS . 'file.php';
 			}
-			$this->__File =& new File($this->settings['path'] . DS . 'cake');
+			$this->__File = new File($this->settings['path'] . DS . 'cake');
 		}
 
 		if (DIRECTORY_SEPARATOR === '\\') {
@@ -152,7 +152,7 @@ class FileEngine extends CacheEngine {
 		if ($this->settings['lock']) {
 			flock($handle, LOCK_EX);
 		}
-		
+
 		$success = ftruncate($handle, 0) && fwrite($handle, $contents) && fflush($handle);
 
 		if ($this->settings['lock']) {

@@ -282,7 +282,7 @@ class BehaviorCollection extends CakeObject {
 				if (PHP5) {
 					$this->{$name} = new $class;
 				} else {
-					$this->{$name} =& new $class;
+					$this->{$name} = new $class;
 				}
 				ClassRegistry::addObject($class, $this->{$name});
 				if (!empty($plugin)) {

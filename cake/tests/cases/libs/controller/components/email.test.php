@@ -70,7 +70,7 @@ class EmailTestComponent extends EmailComponent {
 /**
  * Allows mocks to be used with tests.
  *
- * @param array $config 
+ * @param array $config
  * @return void
  */
 	function _getSocket($config) {
@@ -219,7 +219,7 @@ class EmailComponentTest extends CakeTestCase {
 		$this->_appEncoding = Configure::read('App.encoding');
 		Configure::write('App.encoding', 'UTF-8');
 
-		$this->Controller =& new EmailTestController();
+		$this->Controller = new EmailTestController();
 
 		restore_error_handler();
 		@$this->Controller->Component->init($this->Controller);
@@ -527,7 +527,7 @@ HTMLBLOC;
 		$expect = str_replace('{CONTENTTYPE}', 'text/html; charset=UTF-8', $header) . $html;
 		$expect = '<pre>' . $expect . "\n</pre>";
 		$this->assertEqual($this->Controller->Session->read('Message.email.message'), $this->__osFix($expect));
-		
+
 		$result = ClassRegistry::getObject('view');
 		$this->assertFalse($result);
 	}
@@ -542,7 +542,7 @@ HTMLBLOC;
 		$this->skipIf(!@fsockopen('localhost', 25), '%s No SMTP server running on localhost');
 
 		$this->Controller->EmailTest->reset();
-		$socket =& new CakeSocket(array_merge(array('protocol'=>'smtp'), $this->Controller->EmailTest->smtpOptions));
+		$socket = new CakeSocket(array_merge(array('protocol'=>'smtp'), $this->Controller->EmailTest->smtpOptions));
 		$this->Controller->EmailTest->setConnectionSocket($socket);
 
 		$this->assertTrue($this->Controller->EmailTest->getConnectionSocket());
@@ -810,7 +810,7 @@ HTMLBLOC;
 
 		$result = $this->Controller->EmailTest->formatAddress('alias <email@example.com>');
 		$this->assertEqual($result, 'alias <email@example.com>');
-		
+
 		$result = $this->Controller->EmailTest->formatAddress('alias<email@example.com>');
 		$this->assertEqual($result, 'alias <email@example.com>');
 
@@ -839,7 +839,7 @@ HTMLBLOC;
 		$this->Controller->EmailTest->charset = 'UTF-8';
 		$result = $this->Controller->EmailTest->formatAddress('ÄÖÜTest <email@domain.de>');
 		$this->assertEqual($result, '=?UTF-8?B?w4TDlsOcVGVzdCA=?= <email@domain.de>');
-		
+
 		$result = $this->Controller->EmailTest->formatAddress('ÄÖÜTest<email@domain.de>');
 		$this->assertEqual($result, '=?UTF-8?B?w4TDlsOcVGVzdA==?= <email@domain.de>');
 

@@ -136,7 +136,7 @@ class SecurityComponentTest extends CakeTestCase {
  * @return void
  */
 	function setUp() {
-		$this->Controller =& new SecurityTestController();
+		$this->Controller = new SecurityTestController();
 		$this->Controller->Component->init($this->Controller);
 		$this->Controller->Security =& $this->Controller->TestSecurity;
 		$this->Controller->Security->blackHoleCallback = 'fail';
@@ -570,7 +570,7 @@ DIGEST;
 	}
 
 /**
- * Test that objects can't be passed into the serialized string. This was a vector for RFI and LFI 
+ * Test that objects can't be passed into the serialized string. This was a vector for RFI and LFI
  * attacks. Thanks to Felix Wilhelm
  *
  * @return void

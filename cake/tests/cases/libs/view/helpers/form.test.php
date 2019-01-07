@@ -600,10 +600,10 @@ class FormHelperTest extends CakeTestCase {
 		parent::setUp();
 		Router::reload();
 
-		$this->Form =& new FormHelper();
-		$this->Form->Html =& new HtmlHelper();
-		$this->Controller =& new ContactTestController();
-		$this->View =& new View($this->Controller);
+		$this->Form = new FormHelper();
+		$this->Form->Html = new HtmlHelper();
+		$this->Controller = new ContactTestController();
+		$this->View = new View($this->Controller);
 
 		ClassRegistry::addObject('view', $view);
 		ClassRegistry::addObject('Contact', new Contact());
@@ -1767,7 +1767,7 @@ class FormHelperTest extends CakeTestCase {
 		$this->Form->data = array('Contact' => array('created' => null));
 		$result = $this->Form->input('Contact.created', array('type' => 'datetime', 'dateFormat' => 'NONE'));
 		$this->assertPattern('/for\="ContactCreatedHour"/', $result);
-		
+
 		$this->Form->data = array('Contact' => array('created' => null));
 		$result = $this->Form->input('Contact.created', array('type' => 'datetime', 'timeFormat' => 'NONE'));
 		$this->assertPattern('/for\="ContactCreatedMonth"/', $result);
@@ -3256,7 +3256,7 @@ class FormHelperTest extends CakeTestCase {
 		);
 		$this->assertTags($result, $expected);
 	}
-	
+
 /**
  * Test that specifying false in the 'disabled' option will not disable either the hidden input or the checkbox input
  *
@@ -3270,7 +3270,7 @@ class FormHelperTest extends CakeTestCase {
 		);
 		$this->assertTags($result, $expected);
 	}
-	
+
 /**
  * testDateTime method
  *
@@ -4440,11 +4440,11 @@ class FormHelperTest extends CakeTestCase {
  **/
 	function testFileUploadOnOtherModel() {
 		ClassRegistry::removeObject('view');
-		$controller =& new Controller();
+		$controller = new Controller();
 		$controller->name = 'ValidateUsers';
 		$controller->uses = array('ValidateUser');
 		$controller->constructClasses();
-		$view =& new View($controller, true);
+		$view = new View($controller, true);
 
 		$this->Form->create('ValidateUser', array('type' => 'file'));
 		$result = $this->Form->file('ValidateProfile.city');
@@ -4691,7 +4691,7 @@ class FormHelperTest extends CakeTestCase {
 			'/fieldset'
 		);
 		$this->assertTags($result, $expected);
-		
+
 	}
 /**
  * Test base form url when url param is passed with multiple parameters (&)

@@ -325,8 +325,8 @@ class SanitizeTest extends CakeTestCase {
 		$string = <<<HTML
 text
 <style type="text/css">
-<!-- 
-#content { display:none; } 
+<!--
+#content { display:none; }
 -->
 </style>
 text
@@ -338,7 +338,7 @@ HTML;
 		$string = <<<HTML
 text
 <script type="text/javascript">
-<!-- 
+<!--
 alert('wooo');
 -->
 </script>
@@ -430,7 +430,7 @@ HTML;
 	function testFormatColumns() {
 		$this->loadFixtures('DataTest', 'Article');
 
-		$this->DataTest =& new SanitizeDataTest(array('alias' => 'DataTest'));
+		$this->DataTest = new SanitizeDataTest(array('alias' => 'DataTest'));
 		$data = array('DataTest' => array(
 						'id' => 'z',
 						'count' => '12a',
@@ -449,7 +449,7 @@ HTML;
 		$result = $this->DataTest->data;
 		$this->assertEqual($result, $expected);
 
-		$this->Article =& new SanitizeArticle(array('alias' => 'Article'));
+		$this->Article = new SanitizeArticle(array('alias' => 'Article'));
 		$data = array('Article' => array(
 			'id' => 'ZB',
 			'user_id' => '12',

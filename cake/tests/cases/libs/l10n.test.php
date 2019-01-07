@@ -38,7 +38,7 @@ class L10nTest extends CakeTestCase {
  * @return void
  */
 	function testGet() {
-		$l10n =& new L10n();
+		$l10n = new L10n();
 
 		// Catalog Entry
 		$l10n->get('en');
@@ -93,7 +93,7 @@ class L10nTest extends CakeTestCase {
 		$__SERVER = $_SERVER;
 		$_SERVER['HTTP_ACCEPT_LANGUAGE'] = 'inexistent,en-ca';
 
-		$l10n =& new L10n();
+		$l10n = new L10n();
 		$l10n->get();
 
 		$this->assertEqual($l10n->language, 'English (Canadian)');
@@ -123,7 +123,7 @@ class L10nTest extends CakeTestCase {
  * @return void
  */
 	function testMap() {
-		$l10n =& new L10n();
+		$l10n = new L10n();
 
 		$result = $l10n->map(array('afr', 'af'));
 		$expected = array('afr' => 'af', 'af' => 'afr');
@@ -428,7 +428,7 @@ class L10nTest extends CakeTestCase {
 		$result = $l10n->map(array('xho', 'xh'));
 		$expected = array('xho' => 'xh', 'xh' => 'xho');
 		$this->assertEqual($result, $expected);
-	
+
 		$result = $l10n->map(array('cy', 'cym'));
 		$expected = array('cym' => 'cy', 'cy' => 'cym');
 		$this->assertEqual($result, $expected);
@@ -448,7 +448,7 @@ class L10nTest extends CakeTestCase {
  * @return void
  */
 	function testCatalog() {
-		$l10n =& new L10n();
+		$l10n = new L10n();
 
 		$result = $l10n->catalog(array('af'));
 		$expected = array(

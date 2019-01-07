@@ -51,7 +51,7 @@ class TestShell extends Shell {
  *
  * @var name
  * @access public
- */	
+ */
 	var $name = 'TestShell';
 }
 /**
@@ -94,8 +94,8 @@ class ShellTest extends CakeTestCase {
  * @access public
  */
 	function setUp() {
-		$this->Dispatcher =& new TestShellMockShellDispatcher();
-		$this->Shell =& new TestShell($this->Dispatcher);
+		$this->Dispatcher = new TestShellMockShellDispatcher();
+		$this->Shell = new TestShell($this->Dispatcher);
 	}
 /**
  * tearDown method
