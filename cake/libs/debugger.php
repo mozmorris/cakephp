@@ -27,8 +27,8 @@
  * Included libraries.
  *
  */
-	if (!class_exists('Object')) {
-		uses('object');
+	if (!class_exists('CakeObject')) {
+		uses('cake_object');
 	}
 	if (!class_exists('CakeLog')) {
 		uses('cake_log');

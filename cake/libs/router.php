@@ -27,7 +27,7 @@
  * Included libraries.
  *
  */
-if (!class_exists('Object')) {
+if (!class_exists('CakeObject')) {
 	App::import('Core', 'Object');
 }
 /**

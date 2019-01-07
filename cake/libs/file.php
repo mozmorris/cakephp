@@ -25,8 +25,8 @@
  * Included libraries.
  *
  */
-if (!class_exists('Object')) {
-	uses('object');
+if (!class_exists('CakeObject')) {
+	uses('cake_object');
 }
 if (!class_exists('Folder')) {
 	require LIBS . 'folder.php';
