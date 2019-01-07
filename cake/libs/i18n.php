@@ -35,7 +35,7 @@ App::import('Core', 'l10n');
  * @package       cake
  * @subpackage    cake.cake.libs
  */
-class I18n extends Object {
+class I18n extends CakeObject {
 /**
  * Instance of the I10n class for localization
  *
@@ -124,7 +124,7 @@ class I18n extends Object {
  */
 	function translate($singular, $plural = null, $domain = null, $category = 6, $count = null) {
 		$_this =& I18n::getInstance();
-		
+
 		if (strpos($singular, "\r\n") !== false) {
 			$singular = str_replace("\r\n", "\n", $singular);
 		}

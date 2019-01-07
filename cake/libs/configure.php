@@ -30,7 +30,7 @@
  * @subpackage    cake.cake.libs
  * @link          http://book.cakephp.org/view/42/The-Configuration-Class
  */
-class Configure extends Object {
+class Configure extends CakeObject {
 /**
  * List of additional path(s) where model files reside.
  *
@@ -681,14 +681,14 @@ class Configure extends Object {
 /**
  * Determines if $__objects cache should be reset.
  *
- * @param boolean $reset 
+ * @param boolean $reset
  * @return boolean
  * @access private
- */	
+ */
 	function __resetCache($reset = null) {
 		static $cache = array();
 		if (!$cache && $reset === true) {
-			$cache = true;	
+			$cache = true;
 		}
 		return $cache;
 	}
@@ -711,7 +711,7 @@ class Configure extends Object {
  * @package       cake
  * @subpackage    cake.cake.libs
  */
-class App extends Object {
+class App extends CakeObject {
 /**
  * Paths to search for files.
  *
@@ -1164,14 +1164,14 @@ class App extends Object {
 /**
  * Determines if $__maps and $__paths cache should be reset.
  *
- * @param boolean $reset 
+ * @param boolean $reset
  * @return boolean
  * @access private
- */	
+ */
 	function __resetCache($reset = null) {
 		static $cache = array();
 		if (!$cache && $reset === true) {
-			$cache = true;	
+			$cache = true;
 		}
 		return $cache;
 	}

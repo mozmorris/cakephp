@@ -34,7 +34,7 @@ config('database');
  * @package       cake
  * @subpackage    cake.cake.libs.model
  */
-class ConnectionManager extends Object {
+class ConnectionManager extends CakeObject {
 /**
  * Holds a loaded instance of the Connections object
  *

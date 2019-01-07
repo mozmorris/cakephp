@@ -35,7 +35,7 @@ if (!defined('REQUEST_MOBILE_UA')) {
  * @subpackage    cake.cake.libs.controller.components
  *
  */
-class RequestHandlerComponent extends Object {
+class RequestHandlerComponent extends CakeObject {
 /**
  * The layout that will be switched to for Ajax requests
  *
@@ -617,7 +617,7 @@ class RequestHandlerComponent extends Object {
  *    like 'application/x-shockwave'.
  * @param array $options If $type is a friendly type name that is associated with
  *    more than one type of content, $index is used to select which content-type to use.
- *   
+ *
  * @return boolean Returns false if the friendly type name given in $type does
  *    not exist in the type map, or if the Content-type header has
  *    already been set by this method.

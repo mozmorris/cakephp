@@ -32,7 +32,7 @@ App::import('Core', 'String');
  * @package       cake
  * @subpackage    cake.cake.libs.controller.components
  */
-class SecurityComponent extends Object {
+class SecurityComponent extends CakeObject {
 /**
  * The controller method that will be called if this request is black-hole'd
  *

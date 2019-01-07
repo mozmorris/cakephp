@@ -37,7 +37,7 @@ App::import('Core', array('Component', 'View'));
  * @link          http://book.cakephp.org/view/49/Controllers
  *
  */
-class Controller extends Object {
+class Controller extends CakeObject {
 /**
  * The name of this controller. Controller names are plural, named after the model they manipulate.
  *
@@ -72,7 +72,7 @@ class Controller extends Object {
  *
  * Example: var $uses = array('Product', 'Post', 'Comment');
  *
- * Can be set to array() to use no models.  Can be set to false to 
+ * Can be set to array() to use no models.  Can be set to false to
  * use no models and prevent the merging of $uses with AppController
  *
  * @var mixed A single name as a string or a list of names as an array.
@@ -294,7 +294,7 @@ class Controller extends Object {
  */
 	var $methods = array();
 /**
- * This controller's primary model class name, the Inflector::classify()'ed version of 
+ * This controller's primary model class name, the Inflector::classify()'ed version of
  * the controller's $name property.
  *
  * Example: For a controller named 'Comments', the modelClass would be 'Comment'

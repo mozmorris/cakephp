@@ -31,7 +31,7 @@
  * @package       cake
  * @subpackage    cake.cake.libs.model.datasources
  */
-class DataSource extends Object {
+class DataSource extends CakeObject {
 /**
  * Are we connected to the DataSource?
  *
@@ -329,7 +329,7 @@ class DataSource extends Object {
  * To-be-overridden in subclasses.
  *
  * @param Model $model The model class having record(s) deleted
- * @param mixed $id Primary key of the model 
+ * @param mixed $id Primary key of the model
  */
 	function delete(&$model, $id = null) {
 		if ($id == null) {

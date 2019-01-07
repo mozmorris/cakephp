@@ -30,7 +30,7 @@ if (!class_exists('File')) {
  * @package       cake.tests
  * @subpackage    cake.tests.cases.libs
  */
-class MagicDb extends Object {
+class MagicDb extends CakeObject {
 /**
  * Holds the parsed MagicDb for this class instance
  *
@@ -177,7 +177,7 @@ class MagicDb extends Object {
  * @package       cake.tests
  * @subpackage    cake.tests.cases.libs
  */
-class MagicFileResource extends Object{
+class MagicFileResource extends CakeObject{
 /**
  * undocumented variable
  *

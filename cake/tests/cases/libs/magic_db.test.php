@@ -160,7 +160,7 @@ class MagicDbTest extends UnitTestCase {
  * @package       cake
  * @subpackage    cake.tests.cases.libs
  */
-class MagicDbTestData extends Object {
+class MagicDbTestData extends CakeObject {
 /**
  * Base64 encoded data
  *

@@ -38,7 +38,7 @@ if (!class_exists('Object')) {
  * @package       cake
  * @subpackage    cake.cake.libs
  */
-class Flay extends Object{
+class Flay extends CakeObject{
 /**
  * Text to be parsed.
  *

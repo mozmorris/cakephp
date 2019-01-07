@@ -71,7 +71,7 @@ if (!class_exists('AppController')) {
  * @package       cake
  * @subpackage    cake.tests.cases.libs.controller
  */
-class ParamTestComponent extends Object {
+class ParamTestComponent extends CakeObject {
 /**
  * name property
  *
@@ -132,7 +132,7 @@ class ComponentTestController extends AppController {
  * @package       cake
  * @subpackage    cake.tests.cases.libs.controller
  */
-class AppleComponent extends Object {
+class AppleComponent extends CakeObject {
 /**
  * components property
  *
@@ -164,7 +164,7 @@ class AppleComponent extends Object {
  * @package       cake
  * @subpackage    cake.tests.cases.libs.controller
  */
-class OrangeComponent extends Object {
+class OrangeComponent extends CakeObject {
 /**
  * components property
  *
@@ -201,7 +201,7 @@ class OrangeComponent extends Object {
  * @package       cake
  * @subpackage    cake.tests.cases.libs.controller
  */
-class BananaComponent extends Object {
+class BananaComponent extends CakeObject {
 /**
  * testField property
  *
@@ -226,7 +226,7 @@ class BananaComponent extends Object {
  * @package       cake
  * @subpackage    cake.tests.cases.libs.controller
  */
-class MutuallyReferencingOneComponent extends Object {
+class MutuallyReferencingOneComponent extends CakeObject {
 /**
  * components property
  *
@@ -241,7 +241,7 @@ class MutuallyReferencingOneComponent extends Object {
  * @package       cake
  * @subpackage    cake.tests.cases.libs.controller
  */
-class MutuallyReferencingTwoComponent extends Object {
+class MutuallyReferencingTwoComponent extends CakeObject {
 /**
  * components property
  *
@@ -256,7 +256,7 @@ class MutuallyReferencingTwoComponent extends Object {
  * @package       cake
  * @subpackage    cake.tests.cases.libs.controller
  */
-class SomethingWithEmailComponent extends Object {
+class SomethingWithEmailComponent extends CakeObject {
 /**
  * components property
  *

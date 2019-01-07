@@ -29,7 +29,7 @@
  * @package       cake
  * @subpackage    cake.cake.libs
  */
-class Set extends Object {
+class Set extends CakeObject {
 /**
  * Deprecated
  *
@@ -339,7 +339,7 @@ class Set extends Object {
 		return $out;
 	}
 /**
- * Implements partial support for XPath 2.0. If $path is an array or $data is empty it the call 
+ * Implements partial support for XPath 2.0. If $path is an array or $data is empty it the call
  * is delegated to Set::classicExtract.
  *
  * #### Currently implemented selectors:
@@ -360,8 +360,8 @@ class Set extends Object {
  *
  * - Only absolute paths starting with a single '/' are supported right now
  *
- * **Warning**: Even so it has plenty of unit tests the XPath support has not gone through a lot of 
- * real-world testing. Please report Bugs as you find them. Suggestions for additional features to 
+ * **Warning**: Even so it has plenty of unit tests the XPath support has not gone through a lot of
+ * real-world testing. Please report Bugs as you find them. Suggestions for additional features to
  * implement are also very welcome!
  *
  * @param string $path An absolute XPath 2.0 path

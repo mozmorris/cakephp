@@ -33,7 +33,7 @@ App::import('Core', array('Helper', 'ClassRegistry'));
  * @package       cake
  * @subpackage    cake.cake.libs.view
  */
-class View extends Object {
+class View extends CakeObject {
 /**
  * Path parts for creating links in views.
  *
@@ -804,7 +804,7 @@ class View extends Object {
 		}
 
 		$paths = $this->_paths(Inflector::underscore($this->plugin));
-		
+
 		$exts = array($this->ext, '.ctp', '.thtml');
 		foreach ($exts as $ext) {
 			foreach ($paths as $path) {

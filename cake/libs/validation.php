@@ -51,7 +51,7 @@
  * @subpackage    cake.cake.libs
  * @since         CakePHP v 1.2.0.3830
  */
-class Validation extends Object {
+class Validation extends CakeObject {
 /**
  * Set the the value of methods $check param.
  *

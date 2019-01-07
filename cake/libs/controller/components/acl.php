@@ -31,7 +31,7 @@
  * @package       cake
  * @subpackage    cake.cake.libs.controller.components
  */
-class AclComponent extends Object {
+class AclComponent extends CakeObject {
 /**
  * Instance of an ACL class
  *
@@ -156,7 +156,7 @@ class AclComponent extends Object {
  * @subpackage    cake.cake.libs.controller.components
  * @abstract
  */
-class AclBase extends Object {
+class AclBase extends CakeObject {
 /**
  * This class should never be instantiated, just subclassed.
  *

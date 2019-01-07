@@ -34,7 +34,7 @@
  * @package       cake
  * @subpackage    cake.cake.libs.controller
  */
-class Scaffold extends Object {
+class Scaffold extends CakeObject {
 /**
  * Controller object
  *
@@ -283,7 +283,7 @@ class Scaffold extends Object {
 
 				if ($this->ScaffoldModel->save($this->controller->data)) {
 					if ($this->controller->_afterScaffoldSave($action)) {
-						$message = sprintf(__('The %1$s has been %2$s', true), 
+						$message = sprintf(__('The %1$s has been %2$s', true),
 							Inflector::humanize($this->modelKey),
 							$success
 						);

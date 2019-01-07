@@ -29,7 +29,7 @@
  * @package       cake
  * @subpackage    cake.cake.libs
  */
-class String extends Object {
+class String extends CakeObject {
 /**
  * Gets a reference to the String object instance
  *

@@ -327,7 +327,7 @@ class TestController extends AppController {
  * @package       cake
  * @subpackage    cake.tests.cases.libs.controller
  */
-class TestComponent extends Object {
+class TestComponent extends CakeObject {
 /**
  * beforeRedirect method
  *
@@ -518,7 +518,7 @@ class ControllerTest extends CakeTestCase {
 		$this->assertIdentical($Controller->params['paging']['ControllerPost']['pageCount'], 3);
 		$this->assertIdentical($Controller->params['paging']['ControllerPost']['prevPage'], false);
 		$this->assertIdentical($Controller->params['paging']['ControllerPost']['nextPage'], true);
-		
+
 		$Controller->passedArgs = array();
 		$Controller->paginate = array('limit' => 'garbage!');
 		$Controller->paginate('ControllerPost');
@@ -939,7 +939,7 @@ class ControllerTest extends CakeTestCase {
 
 		$expected = array('ControllerComment', 'ControllerAlias', 'ControllerPost');
 		$this->assertEqual($expected, $TestController->uses, '$uses was merged incorrectly, AppController models should be last.');
-		
+
 
 		$TestController =& new AnotherTestController();
 		$TestController->constructClasses();

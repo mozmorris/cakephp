@@ -37,7 +37,7 @@ if (!class_exists('Folder')) {
  * @package       cake
  * @subpackage    cake.cake.libs
  */
-class File extends Object {
+class File extends CakeObject {
 /**
  * Folder object of the File
  *

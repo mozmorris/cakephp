@@ -36,7 +36,7 @@ App::import('Core', array('Router', 'Controller'));
  * @package       cake
  * @subpackage    cake.cake
  */
-class Dispatcher extends Object {
+class Dispatcher extends CakeObject {
 /**
  * Base URL
  *

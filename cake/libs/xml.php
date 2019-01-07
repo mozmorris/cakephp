@@ -33,7 +33,7 @@ App::import('Core', 'Set');
  * @subpackage    cake.cake.libs
  * @since         CakePHP v .0.10.3.1400
  */
-class XmlNode extends Object {
+class XmlNode extends CakeObject {
 /**
  * Name of node
  *
@@ -688,7 +688,7 @@ class XmlNode extends Object {
 			if (isset($out[$key])) {
 				if(!isset($out[$key][0]) || !is_array($out[$key]) || !is_int(key($out[$key]))) {
 					$out[$key] = array($out[$key]);
-				} 
+				}
 				$out[$key][] = $value;
 			} elseif (isset($out[$child->name])) {
 				$t = $out[$child->name];

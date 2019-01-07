@@ -44,7 +44,7 @@ if (!class_exists('Set')) {
  * @subpackage    cake.cake.libs
  * @link          http://book.cakephp.org/view/491/Inflector
  */
-class Inflector extends Object {
+class Inflector extends CakeObject {
 /**
  * Pluralized words.
  *

@@ -34,7 +34,7 @@
  *
  */
 App::import('Core', 'Multibyte');
-class EmailComponent extends Object{
+class EmailComponent extends CakeObject{
 /**
  * Recipient of the email
  *

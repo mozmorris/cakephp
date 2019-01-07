@@ -153,7 +153,7 @@ class RequestActionPersistentController extends Controller {
  * @package       cake
  * @subpackage    cake.tests.cases.libs
  */
-class TestObject extends Object {
+class TestObject extends CakeObject {
 /**
  * firstName property
  *
@@ -285,7 +285,7 @@ class TestObject extends Object {
  * @package       cake
  * @subpackage    cake.tests.cases.libs
  */
-class ObjectTestModel extends CakeTestModel {
+class CakeObjectTestModel extends CakeTestModel {
 	var $useTable = false;
 	var $name = 'ObjectTestModel';
 }
@@ -295,7 +295,7 @@ class ObjectTestModel extends CakeTestModel {
  * @package       cake
  * @subpackage    cake.tests.cases.libs
  */
-class ObjectTest extends CakeTestCase {
+class CakeObjectTest extends CakeTestCase {
 /**
  * fixtures
  *
@@ -414,7 +414,7 @@ class ObjectTest extends CakeTestCase {
 		$this->assertTrue(file_exists(CACHE . 'persistent' . DS . 'tags.tag.php'));
 		$this->object->testPersist('Tags.Tag', true, $data);
 		$this->assertEqual($this->object->{'Tags.Tag'}, $data);
-		
+
 		@unlink(CACHE . 'persistent' . DS . 'tags.tag.php');
 		Configure::write('Cache.disable', $cacheDisable);
 	}

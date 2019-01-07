@@ -36,7 +36,7 @@ if (!class_exists('Object')) {
  * @package       cake
  * @subpackage    cake.cake.libs
  */
-class Router extends Object {
+class Router extends CakeObject {
 /**
  * Array of routes
  *

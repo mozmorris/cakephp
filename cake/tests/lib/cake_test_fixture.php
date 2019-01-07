@@ -29,7 +29,7 @@
  * @package       cake
  * @subpackage    cake.cake.tests.lib
  */
-class CakeTestFixture extends Object {
+class CakeTestFixture extends CakeObject {
 /**
  * Name of the object
  *
