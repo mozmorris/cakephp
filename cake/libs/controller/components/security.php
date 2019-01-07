@@ -23,7 +23,7 @@
  * @lastmodified  $Date$
  * @license       http://www.opensource.org/licenses/mit-license.php The MIT License
  */
-App::import('Core', 'String');
+App::import('Core', 'CakeString');
 /**
  * Short description for file.
  *
@@ -669,7 +669,7 @@ class SecurityComponent extends CakeObject {
 			'type' => 'basic',
 			'realm' => env('SERVER_NAME'),
 			'qop' => 'auth',
-			'nonce' => String::uuid()
+			'nonce' => CakeString::uuid()
 		), array_filter($options));
 		$options = array_merge(array('opaque' => md5($options['realm'])), $options);
 	}

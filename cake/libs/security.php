@@ -83,10 +83,10 @@ class Security extends CakeObject {
   * @static
   */
 	function generateAuthKey() {
-		if (!class_exists('String')) {
-			App::import('Core', 'String');
+		if (!class_exists('CakeString')) {
+			App::import('Core', 'CakeString');
 		}
-		return Security::hash(String::uuid());
+		return Security::hash(CakeString::uuid());
 	}
 /**
  * Validate authorization hash.

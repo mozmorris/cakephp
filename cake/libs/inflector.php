@@ -494,8 +494,8 @@ class Inflector extends CakeObject {
  * @link http://book.cakephp.org/view/572/Class-methods
  */
 	function slug($string, $replacement = '_') {
-		if (!class_exists('String')) {
-			require LIBS . 'string.php';
+		if (!class_exists('CakeString')) {
+			require LIBS . 'cake_string.php';
 		}
 		$map = array(
 			'/à|á|å|â/' => 'a',
@@ -514,7 +514,7 @@ class Inflector extends CakeObject {
 			'/ß/' => 'ss',
 			'/[^\w\s]/' => ' ',
 			'/\\s+/' => $replacement,
-			String::insert('/^[:replacement]+|[:replacement]+$/', array('replacement' => preg_quote($replacement, '/'))) => '',
+			CakeString::insert('/^[:replacement]+|[:replacement]+$/', array('replacement' => preg_quote($replacement, '/'))) => '',
 		);
 		return preg_replace(array_keys($map), array_values($map), $string);
 	}
