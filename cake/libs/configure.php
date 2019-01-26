@@ -1119,11 +1119,13 @@ class App extends CakeObject {
 			$paths = array();
 
 			foreach ($path as $key => $value) {
-				$count = count($key);
+				$count = count($path[$key]);
 				for ($i = 0; $i < $count; $i++) {
 					$paths[] = $path[$key][$i];
 				}
 			}
+
+
 			return $paths;
 		}
 
