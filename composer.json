@@ -1,0 +1,18 @@
+{
+    "name": "cakephp/cakephp",
+    "description": "The CakePHP framework",
+    "type": "library",
+    "keywords": [
+        "framework",
+        "mvc",
+        "rapid-development",
+        "conventions over configuration",
+        "dry",
+        "orm",
+        "form",
+        "validation",
+        "psr-7"
+    ],
+    "homepage": "https://cakephp.org",
+    "license": "MIT"
+}
