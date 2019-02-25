@@ -261,7 +261,7 @@ class RequestHandlerComponent extends CakeObject {
  * @access public
  */
 	function isSSL() {
-		return env('HTTPS');
+		return env('X-Forwarded-Proto') === 'https' || env('HTTPS');
 	}
 /**
  * Returns true if the current call accepts an XML response, false otherwise
