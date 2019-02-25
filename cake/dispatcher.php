@@ -602,8 +602,9 @@ class Dispatcher extends CakeObject {
 			$assets = array(
 				'js' => 'text/javascript', 'css' => 'text/css',
 				'gif' => 'image/gif', 'jpg' => 'image/jpeg', 'png' => 'image/png'
-			);
-			$ext = array_pop(explode('.', $url));
+            );
+            $ext = explode('.', $url);
+			$ext = array_pop($ext);
 
 			foreach ($assets as $type => $contentType) {
 				if ($type === $ext) {
