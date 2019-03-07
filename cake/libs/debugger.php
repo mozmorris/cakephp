@@ -154,7 +154,7 @@ class Debugger extends CakeObject {
  * @access public
  */
 	function handleError($code, $description, $file = null, $line = null, $context = null) {
-		if (error_reporting() == 0 || $code === 2048 || $code === 8192) {
+		if (error_reporting() === 0 || $code === 2048 || $code === 8192 || strpos($description, 'Declaration of') === 0) {
 			return;
 		}
 
